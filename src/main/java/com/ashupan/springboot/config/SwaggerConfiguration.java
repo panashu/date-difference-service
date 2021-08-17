@@ -17,7 +17,7 @@ public class SwaggerConfiguration {
   @Bean
   public Docket productApi() {
     return new Docket(DocumentationType.SWAGGER_2).select()
-        .apis(RequestHandlerSelectors.basePackage("com.ashupan.lambda.controller"))
+        .apis(RequestHandlerSelectors.basePackage("com.ashupan.springboot.controller"))
         .paths(PathSelectors.regex("/api.*")).build();
   }
 }
