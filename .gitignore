@@ -2,6 +2,7 @@
 .project
 .settings
 .springBeans
+.metadata
 RemoteSystemsTempFiles
 target
 bin
