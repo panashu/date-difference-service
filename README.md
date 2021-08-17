@@ -82,7 +82,7 @@ We have two choices when we need to update the Lambda code. We can delete and re
 	- Build the updated code : mvn clean package
 	- Update the function. Be sure to adjust the full function-name
 		
-		aws lambda update-function-code --function-name spring-boot-lambdaSpringBootFunction --zip-file fileb://target/date-difference-service-1.0.0-SNAPSHOT.jar
+		aws lambda update-function-code --function-name date-difference-serviceDateDifferenceFunction --zip-file fileb://target/date-difference-service-1.0.0-SNAPSHOT.jar
 
 # Monitoring
 

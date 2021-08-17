@@ -2,6 +2,7 @@
 .project
 .settings
 .springBeans
+RemoteSystemsTempFiles
 target
 bin
 classes
