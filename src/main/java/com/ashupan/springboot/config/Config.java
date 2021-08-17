@@ -1,4 +1,4 @@
-package com.ashupan.lambda.config;
+package com.ashupan.springboot.config;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
