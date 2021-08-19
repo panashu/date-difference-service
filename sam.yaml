@@ -6,7 +6,7 @@ Resources:
   DateDifferenceFunction:
     Type: AWS::Serverless::Function
     Properties:
-      Handler: com.ashupan.lambda.LambdaHandler::handleRequest
+      Handler: com.ashupan.springboot.LambdaHandler::handleRequest
       Runtime: java8
       CodeUri: target/date-difference-service-1.0.0-SNAPSHOT.jar
       MemorySize: 1512
@@ -22,6 +22,6 @@ Resources:
 Outputs:
   DateDifferenceApi:
     Description: URL for application
-    Value: !Sub 'https://${ServerlessRestApi}.execute-api.${AWS::Region}.amazonaws.com/Stage/languages'
+    Value: !Sub 'https://${ServerlessRestApi}.execute-api.${AWS::Region}.amazonaws.com/api/datedifference?inputDate=<yyyy-MM-dd>'
     Export:
       Name: DateDifferenceApi

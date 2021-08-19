@@ -18,6 +18,7 @@ This service offers Rest API that takes in any date and returns the difference i
 - Key Technical Features 
 
 	- **Handler and Configuration** - The LambdaHandler class is created in the same package as the application. This code is the same as that is detailed by the AWS Serverless Java container quick start. The only addition is to enable the lambda Spring Boot profile. handler.activateSpringProfiles("lambda");
+	
 	A standard Spring Boot configuration class Config is created. We are disabling beans used for HTTP handling and optimizing for Lambda execution. @EnableWebMvc is required for Lambda deployment. The @Profile annotation makes these beans only load when the Lambda profile is enabled. Thus, the code can still run as a Spring Boot application outside of Lambda.
 	
 	- **Deployment with SAM** - AWS CloudFormation provides a common language for describing and provisioning all the infrastructure resources in your cloud environment.
@@ -29,7 +30,7 @@ This service offers Rest API that takes in any date and returns the difference i
 
 - Spring boot dependencies
 	- **spring-boot-maven-plugin**: To provide main manifest attribute, repackage goal is added to execution goals. Otherwise, we need to call the plugin explicitly as mvn package spring-boot:repackage. With the goal added, we have to call only mvn package.
-	- **spring-boot-maven-plugin**: It packages all dependencies into one uber-jar. It can also be used to build an executable jar by specifying the main class. This plugin is particularly useful as it merges content of specific files instead of overwriting them by Relocating Classes.
+	- **maven-shade-plugin**: It packages all dependencies into one uber-jar. It can also be used to build an executable jar by specifying the main class. This plugin is particularly useful as it merges content of specific files instead of overwriting them by Relocating Classes.
 	
 # Run
 
